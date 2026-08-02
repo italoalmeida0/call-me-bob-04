@@ -7,6 +7,7 @@
  *   title     story title
  *   tagline   one-line teaser for the card
  *   icon      material-symbols icon name
+ *   topics    study-topic chips shown under the title
  *   funcName  the function the player must implement
  *   stub      starter code shown in the editor
  *   story     array of paragraphs (the subject, Bob-flavored)
@@ -35,6 +36,7 @@ export const EXERCISES = [
     tagline: "A storm spun Bob's windmill. Is the gear ring just rotated?",
     icon: "settings",
     funcName: "gears_match",
+    topics: ["Rotation Check", "Array Scanning"],
     stub: "def gears_match(gear_a: list[int], gear_b: list[int]) -> bool:\n    pass\n",
     story: [
       "Bob's old windmill has a ring of numbered teeth. Last night a storm spun the whole ring around its axle — the teeth are all still in the same order, but the ring might start at a different tooth now.",
@@ -87,6 +89,7 @@ export const EXERCISES = [
     tagline: "Bob sketches the fireflies he spots on squared paper.",
     icon: "grid-on",
     funcName: "firefly_grid",
+    topics: ["2D Grid", "Matrix Rendering"],
     stub: "def firefly_grid(fireflies: list[tuple[int, int]], size: int) -> list[str]:\n    pass\n",
     story: [
       "Every evening Bob sits on his porch and watches the fireflies. He keeps a notebook with a square grid, and whenever he spots a firefly at some position, he marks a '*' on the paper. Empty squares get a '.'",
@@ -136,6 +139,7 @@ export const EXERCISES = [
     tagline: "Which ingredients show up in EVERY recipe?",
     icon: "cookie",
     funcName: "shared_ingredients",
+    topics: ["Set Intersection", "Sorting"],
     stub: "def shared_ingredients(recipes: list[list[int]]) -> list[int]:\n    pass\n",
     story: [
       "Bob is baking for the village fair. He found a stack of old family recipes, and each one lists its ingredients by their pantry shelf numbers. Bob's pantry is tiny, so he only wants to stock the ingredients that appear in ALL the recipes — everything else he'll borrow from the neighbors.",
@@ -182,6 +186,7 @@ export const EXERCISES = [
     tagline: "Merge Bob's sorted delivery routes into one big route.",
     icon: "local-shipping",
     funcName: "merge_milk_routes",
+    topics: ["Merge K Sorted Lists", "Heap / Greedy"],
     stub: "def merge_milk_routes(routes: list[list[int]]) -> list[int]:\n    pass\n",
     story: [
       "Bob delivers milk at dawn. Each of his carriers hands him a list of house numbers to visit, already sorted from the smallest house number to the largest. Carrying all those separate lists around is a mess, so Bob wants one single route with every stop, still in ascending order.",
@@ -232,6 +237,7 @@ export const EXERCISES = [
     tagline: "Cut the ribbon so every piece reads the same both ways.",
     icon: "content-cut",
     funcName: "ribbon_cuts",
+    topics: ["Palindrome Partitioning", "Dynamic Programming"],
     stub: "def ribbon_cuts(ribbon: str) -> int:\n    pass\n",
     story: [
       "At the village market, Bob sells decorative ribbons printed with letters. A ribbon only sells if every piece on display reads exactly the same forwards and backwards — villagers are picky like that.",
@@ -283,6 +289,7 @@ export const EXERCISES = [
     tagline: "Some tools must be assembled before others. Find the order.",
     icon: "build",
     funcName: "workshop_setup_order",
+    topics: ["Topological Sort", "Graphs (Kahn's Algorithm)"],
     stub: "def workshop_setup_order(tools: dict[str, list[str]]) -> list[str]:\n    pass\n",
     story: [
       "Bob's workshop is a glorious mess. Each tool on his shelf comes with a manual listing which OTHER tools must be assembled first (you need the wrench before the bolt-tightener, obviously).",
@@ -354,6 +361,7 @@ export const EXERCISES = [
     tagline: "Through a gap in the fence, Bob tracks the tallest sunflower.",
     icon: "yard",
     funcName: "tallest_sunflowers",
+    topics: ["Sliding Window Maximum", "Deque"],
     stub: "def tallest_sunflowers(heights: list[int], k: int) -> list[int]:\n    pass\n",
     story: [
       "Bob is absurdly proud of his sunflower patch. His fence has a small gap that lets him see exactly k flower beds at a time. Every morning he walks along the fence, sliding the gap one bed to the right, and writes down the height of the tallest sunflower he can see.",
