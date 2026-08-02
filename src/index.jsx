@@ -188,7 +188,12 @@ function PracticeScreen(props) {
   };
 
   const resetCode = () => {
-    if (!confirm("Start this chore over? Your current code will be replaced by the stub.")) return;
+    if (
+      !confirm(
+        "Start this chore over? Your current code will be replaced by the stub.",
+      )
+    )
+      return;
     cmView.dispatch({
       changes: { from: 0, to: cmView.state.doc.length, insert: ex().stub },
     });
@@ -308,7 +313,11 @@ function PracticeScreen(props) {
                             }
                           >
                             <div class="success-banner mt-3 mb-1 bg-emerald-900/40 border border-emerald-700 rounded-xl px-4 py-3 flex items-center gap-3 flex-wrap font-sans">
-                              <Icon name="celebration" color="4ade80" size={24} />
+                              <Icon
+                                name="celebration"
+                                color="4ade80"
+                                size={24}
+                              />
                               <div class="flex-1 min-w-[180px]">
                                 <div class="text-emerald-300 font-extrabold text-sm">
                                   Chore complete! Bob owes you one.
@@ -322,7 +331,11 @@ function PracticeScreen(props) {
                                 class="flex items-center gap-1 px-3 py-2 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold transition-colors"
                               >
                                 <span>Next chore</span>
-                                <Icon name="arrow-forward" color="ffffff" size={14} />
+                                <Icon
+                                  name="arrow-forward"
+                                  color="ffffff"
+                                  size={14}
+                                />
                               </button>
                             </div>
                           </Show>
@@ -334,64 +347,69 @@ function PracticeScreen(props) {
               }
             >
               <div class="px-5 py-4">
-            <div class="flex items-center gap-2 mb-1">
-              <span class="text-[10px] font-bold uppercase tracking-widest text-[#57534e]">
-                {TIERS[ex().tier - 1].label} · {TIERS[ex().tier - 1].subtitle}
-              </span>
-            </div>
-            <h2 class="text-xl font-black text-amber-400 mb-3">{ex().title}</h2>
+                <div class="flex items-center gap-2 mb-1">
+                  <span class="text-[10px] font-bold uppercase tracking-widest text-[#57534e]">
+                    {TIERS[ex().tier - 1].label} ·{" "}
+                    {TIERS[ex().tier - 1].subtitle}
+                  </span>
+                </div>
+                <h2 class="text-xl font-black text-amber-400 mb-3">
+                  {ex().title}
+                </h2>
 
-            <For each={ex().story}>
-              {(p) => (
-                <p class="text-sm text-[#d6d3d1] leading-relaxed mb-3">{p}</p>
-              )}
-            </For>
+                <For each={ex().story}>
+                  {(p) => (
+                    <p class="text-sm text-[#d6d3d1] leading-relaxed mb-3">
+                      {p}
+                    </p>
+                  )}
+                </For>
 
-            <div class="bg-[#0c0a09] border border-[#292524] rounded-lg px-3 py-2 mb-4">
-              <code class="text-[13px] text-emerald-400 font-mono break-all">
-                {ex().signature}
-              </code>
-            </div>
+                <div class="bg-[#0c0a09] border border-[#292524] rounded-lg px-3 py-2 mb-4">
+                  <code class="text-[13px] text-emerald-400 font-mono break-all">
+                    {ex().signature}
+                  </code>
+                </div>
 
-            <h3 class="text-[11px] font-bold uppercase tracking-widest text-[#78716c] mb-2">
-              The rules
-            </h3>
-            <ul class="mb-5 space-y-1.5">
-              <For each={ex().rules}>
-                {(rule) => (
-                  <li class="flex items-start gap-2 text-sm text-[#d6d3d1]">
-                    <span class="text-amber-500 mt-0.5 shrink-0">
-                      <Icon name="check-small" color="f59e0b" size={16} />
-                    </span>
-                    <span>{rule}</span>
-                  </li>
-                )}
-              </For>
-            </ul>
+                <h3 class="text-[11px] font-bold uppercase tracking-widest text-[#78716c] mb-2">
+                  The rules
+                </h3>
+                <ul class="mb-5 space-y-1.5">
+                  <For each={ex().rules}>
+                    {(rule) => (
+                      <li class="flex items-start gap-2 text-sm text-[#d6d3d1]">
+                        <span class="text-amber-500 mt-0.5 shrink-0">
+                          <Icon name="check-small" color="f59e0b" size={16} />
+                        </span>
+                        <span>{rule}</span>
+                      </li>
+                    )}
+                  </For>
+                </ul>
 
-            <h3 class="text-[11px] font-bold uppercase tracking-widest text-[#78716c] mb-2">
-              Examples
-            </h3>
-            <div class="space-y-2 pb-2">
-              <For each={ex().examples}>
-                {(example) => (
-                  <div class="bg-[#0c0a09] border border-[#292524] rounded-lg px-3 py-2">
-                    <div class="text-[12px] font-mono text-sky-300 break-all">
-                      {example.input}
-                    </div>
-                    <div class="text-[12px] font-mono text-[#a8a29e] break-all">
-                      <span class="text-[#57534e]">→ </span>
-                      {example.output}
-                    </div>
-                    <Show when={example.note}>
-                      <div class="text-[11px] text-[#78716c] mt-1 italic">
-                        {example.note}
+                <h3 class="text-[11px] font-bold uppercase tracking-widest text-[#78716c] mb-2">
+                  Examples
+                </h3>
+                <div class="space-y-2 pb-2">
+                  <For each={ex().examples}>
+                    {(example) => (
+                      <div class="bg-[#0c0a09] border border-[#292524] rounded-lg px-3 py-2">
+                        <div class="text-[12px] font-mono text-sky-300 break-all">
+                          {example.input}
+                        </div>
+                        <div class="text-[12px] font-mono text-[#a8a29e] break-all">
+                          <span class="text-[#57534e]">→ </span>
+                          {example.output}
+                        </div>
+                        <Show when={example.note}>
+                          <div class="text-[11px] text-[#78716c] mt-1 italic">
+                            {example.note}
+                          </div>
+                        </Show>
                       </div>
-                    </Show>
-                  </div>
-                )}
-              </For>
-            </div>
+                    )}
+                  </For>
+                </div>
               </div>
             </Show>
           </div>
@@ -534,7 +552,11 @@ function HomeScreen(props) {
                             </p>
                           </div>
                           <div class="shrink-0 mt-1 text-[#57534e]">
-                            <Icon name="chevron-right" color="57534e" size={20} />
+                            <Icon
+                              name="chevron-right"
+                              color="57534e"
+                              size={20}
+                            />
                           </div>
                         </button>
                       )}
@@ -630,7 +652,7 @@ function App() {
         <span class={`status-dot ${pyodideState()}`}></span>
         <span class="text-[#57534e]">{pyodideText()}</span>
         <span class="flex-1"></span>
-        <span class="text-[#44403c]">call-me-bob</span>
+        <span class="text-[#44403c]">call-me-bob 04</span>
       </div>
     </div>
   );

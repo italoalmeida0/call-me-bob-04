@@ -2,7 +2,7 @@
   "lockfileVersion": 1,
   "workspaces": {
     "": {
-      "name": "call-me-bob",
+      "name": "call-me-bob-04",
       "devDependencies": {
         "@babel/runtime": "^8.0.0",
         "@codemirror/commands": "^6.10.3",

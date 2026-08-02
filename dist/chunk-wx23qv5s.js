@@ -25242,7 +25242,7 @@ var _tmpl$17 = /* @__PURE__ */ template(`<div class="bg-[#0c0a09] border border-
 var _tmpl$18 = /* @__PURE__ */ template(`<div class="flex-1 overflow-y-auto min-h-0"><div class="max-w-4xl mx-auto px-5 py-8 md:py-12"><div class="text-center mb-10"><div class="inline-flex items-center justify-center bg-[#78350f] p-3 rounded-2xl mb-4 rotate-[-3deg]"></div><h1 class="text-4xl md:text-5xl font-black text-white tracking-tight mb-2">call-me-<span class=text-amber-400>bob</span></h1><div class="inline-flex items-center gap-1.5 bg-[#292524] border border-[#44403c] rounded-full px-3 py-1 mb-4"><span class="text-[11px] font-bold uppercase tracking-widest text-[#a8a29e]">To-Do List #04</span></div><p class="text-[#a8a29e] text-base md:text-lg max-w-xl mx-auto leading-relaxed">Bob has a to-do list. You have Python. Help Bob fix his windmill, run the bake sale, tidy the workshop and watch his sunflowers — one chore at a time, right in your browser.</p><div class="mt-5 flex items-center justify-center gap-3"><div class="w-48 h-2.5 bg-[#292524] rounded-full overflow-hidden"><div class="h-full bg-amber-500 rounded-full transition-all duration-500"></div></div><span class="text-xs font-bold text-[#78716c]">/<!> chores done</span></div></div><p class="text-center text-xs text-[#57534e] pb-6">No timers, no pressure. Bob grades with his little robot helper — it runs entirely in your browser.`);
 var _tmpl$19 = /* @__PURE__ */ template(`<div class=mb-8><div class="flex items-baseline gap-2 mb-3"><h2 class="text-sm font-black uppercase tracking-widest text-amber-500"></h2><span class="text-xs text-[#57534e] font-semibold"></span></div><div class="grid grid-cols-1 md:grid-cols-2 gap-4">`);
 var _tmpl$20 = /* @__PURE__ */ template(`<button class="chore-card text-left bg-[#1c1917] border-2 border-[#292524] hover:border-amber-600/60 rounded-2xl p-5 flex items-start gap-4"><div class="bg-[#78350f] p-2.5 rounded-xl shrink-0 flex items-center justify-center"></div><div class="flex-1 min-w-0"><div class="flex items-center gap-2"><h3 class="font-bold text-white"></h3></div><p class="text-sm text-[#a8a29e] mt-1"></p></div><div class="shrink-0 mt-1 text-[#57534e]">`);
-var _tmpl$21 = /* @__PURE__ */ template(`<div class="h-full flex flex-col overflow-hidden"><div class=status-bar><span></span><span class=text-[#57534e]></span><span class=flex-1></span><span class=text-[#44403c]>call-me-bob`);
+var _tmpl$21 = /* @__PURE__ */ template(`<div class="h-full flex flex-col overflow-hidden"><div class=status-bar><span></span><span class=text-[#57534e]></span><span class=flex-1></span><span class=text-[#44403c]>call-me-bob 04`);
 var LS_SOLVED_KEY = "bob_solved_chores";
 var LS_CODE_PREFIX = "bob_chore_code_";
 var svgCache = new Map;
@@ -25410,7 +25410,7 @@ function PracticeScreen(props) {
   };
   const gradeDisabled = () => grading() || props.pyodideState() !== "ready";
   return (() => {
-    var _el$2 = _tmpl$4(), _el$3 = _el$2.firstChild, _el$4 = _el$3.firstChild, _el$5 = _el$4.firstChild, _el$6 = _el$4.nextSibling, _el$7 = _el$6.firstChild, _el$8 = _el$7.nextSibling, _el$9 = _el$6.nextSibling, _el$0 = _el$9.nextSibling, _el$1 = _el$0.nextSibling, _el$10 = _el$1.firstChild, _el$11 = _el$3.nextSibling, _el$12 = _el$11.firstChild, _el$13 = _el$12.firstChild, _el$25 = _el$13.nextSibling, _el$26 = _el$25.firstChild, _el$27 = _el$26.firstChild, _el$28 = _el$26.nextSibling, _el$29 = _el$28.firstChild, _el$32 = _el$12.nextSibling, _el$33 = _el$32.firstChild;
+    var _el$2 = _tmpl$4(), _el$3 = _el$2.firstChild, _el$4 = _el$3.firstChild, _el$5 = _el$4.firstChild, _el$6 = _el$4.nextSibling, _el$7 = _el$6.firstChild, _el$8 = _el$7.nextSibling, _el$9 = _el$6.nextSibling, _el$0 = _el$9.nextSibling, _el$1 = _el$0.nextSibling, _el$10 = _el$1.firstChild, _el$11 = _el$3.nextSibling, _el$12 = _el$11.firstChild, _el$13 = _el$12.firstChild, _el$26 = _el$13.nextSibling, _el$27 = _el$26.firstChild, _el$28 = _el$27.firstChild, _el$29 = _el$27.nextSibling, _el$30 = _el$29.firstChild, _el$33 = _el$12.nextSibling, _el$34 = _el$33.firstChild;
     addEventListener(_el$4, "click", props.onBack, true);
     insert(_el$4, createComponent(Icon, {
       name: "arrow-back",
@@ -25455,39 +25455,39 @@ function PracticeScreen(props) {
       },
       get fallback() {
         return (() => {
-          var _el$34 = _tmpl$5();
+          var _el$35 = _tmpl$5();
           var _ref$2 = traceRef;
-          typeof _ref$2 === "function" ? use(_ref$2, _el$34) : traceRef = _el$34;
-          insert(_el$34, createComponent(Show, {
+          typeof _ref$2 === "function" ? use(_ref$2, _el$35) : traceRef = _el$35;
+          insert(_el$35, createComponent(Show, {
             get when() {
               return trace();
             },
             get fallback() {
               return (() => {
-                var _el$35 = _tmpl$6(), _el$36 = _el$35.firstChild;
-                insert(_el$36, createComponent(Icon, {
+                var _el$36 = _tmpl$6(), _el$37 = _el$36.firstChild;
+                insert(_el$37, createComponent(Icon, {
                   name: "smart-toy",
                   color: "57534e",
                   size: 32
                 }));
-                return _el$35;
+                return _el$36;
               })();
             },
             children: (t2) => (() => {
-              var _el$37 = _tmpl$();
-              insert(_el$37, createComponent(Show, {
+              var _el$38 = _tmpl$();
+              insert(_el$38, createComponent(Show, {
                 get when() {
                   return t2().fatal;
                 },
                 get children() {
                   return [_tmpl$7(), (() => {
-                    var _el$39 = _tmpl$8();
-                    insert(_el$39, () => t2().fatal);
-                    return _el$39;
+                    var _el$40 = _tmpl$8();
+                    insert(_el$40, () => t2().fatal);
+                    return _el$40;
                   })(), _tmpl$9()];
                 }
               }), null);
-              insert(_el$37, createComponent(Show, {
+              insert(_el$38, createComponent(Show, {
                 get when() {
                   return t2().results;
                 },
@@ -25497,27 +25497,27 @@ function PracticeScreen(props) {
                       return t2().results;
                     },
                     children: (r, i2) => (() => {
-                      var _el$52 = _tmpl$12(), _el$53 = _el$52.firstChild, _el$54 = _el$53.firstChild, _el$55 = _el$54.firstChild, _el$57 = _el$55.nextSibling, _el$56 = _el$57.nextSibling, _el$58 = _el$53.nextSibling, _el$59 = _el$58.firstChild, _el$65 = _el$59.nextSibling, _el$60 = _el$65.nextSibling, _el$66 = _el$60.nextSibling, _el$62 = _el$66.nextSibling, _el$64 = _el$62.nextSibling;
-                      insert(_el$54, () => i2() + 1, _el$57);
-                      insert(_el$53, () => r.call, null);
-                      insert(_el$58, () => r.expected, _el$65);
-                      insert(_el$58, (() => {
+                      var _el$53 = _tmpl$12(), _el$54 = _el$53.firstChild, _el$55 = _el$54.firstChild, _el$56 = _el$55.firstChild, _el$58 = _el$56.nextSibling, _el$57 = _el$58.nextSibling, _el$59 = _el$54.nextSibling, _el$60 = _el$59.firstChild, _el$66 = _el$60.nextSibling, _el$61 = _el$66.nextSibling, _el$67 = _el$61.nextSibling, _el$63 = _el$67.nextSibling, _el$65 = _el$63.nextSibling;
+                      insert(_el$55, () => i2() + 1, _el$58);
+                      insert(_el$54, () => r.call, null);
+                      insert(_el$59, () => r.expected, _el$66);
+                      insert(_el$59, (() => {
                         var _c$ = memo(() => r.got === null);
                         return () => _c$() ? "—" : r.got;
-                      })(), _el$66);
-                      insert(_el$64, () => r.ok ? "OK" : "KO");
-                      insert(_el$52, createComponent(Show, {
+                      })(), _el$67);
+                      insert(_el$65, () => r.ok ? "OK" : "KO");
+                      insert(_el$53, createComponent(Show, {
                         get when() {
                           return r.error;
                         },
                         get children() {
-                          var _el$67 = _tmpl$11();
-                          insert(_el$67, () => r.error);
-                          return _el$67;
+                          var _el$68 = _tmpl$11();
+                          insert(_el$68, () => r.error);
+                          return _el$68;
                         }
                       }), null);
-                      createRenderEffect(() => className(_el$64, r.ok ? "trace-ok" : "trace-ko"));
-                      return _el$52;
+                      createRenderEffect(() => className(_el$65, r.ok ? "trace-ok" : "trace-ko"));
+                      return _el$53;
                     })()
                   }), _tmpl$1(), createComponent(Show, {
                     get when() {
@@ -25527,121 +25527,121 @@ function PracticeScreen(props) {
                       return _tmpl$13();
                     },
                     get children() {
-                      var _el$43 = _tmpl$10(), _el$44 = _el$43.firstChild, _el$45 = _el$44.firstChild, _el$46 = _el$45.nextSibling, _el$47 = _el$46.firstChild, _el$49 = _el$47.nextSibling, _el$48 = _el$49.nextSibling, _el$50 = _el$44.nextSibling, _el$51 = _el$50.firstChild;
-                      insert(_el$43, createComponent(Icon, {
+                      var _el$44 = _tmpl$10(), _el$45 = _el$44.firstChild, _el$46 = _el$45.firstChild, _el$47 = _el$46.nextSibling, _el$48 = _el$47.firstChild, _el$50 = _el$48.nextSibling, _el$49 = _el$50.nextSibling, _el$51 = _el$45.nextSibling, _el$52 = _el$51.firstChild;
+                      insert(_el$44, createComponent(Icon, {
                         name: "celebration",
                         color: "4ade80",
                         size: 24
-                      }), _el$44);
-                      insert(_el$46, () => t2().results.length, _el$49);
-                      addEventListener(_el$50, "click", props.onNext, true);
-                      insert(_el$50, createComponent(Icon, {
+                      }), _el$45);
+                      insert(_el$47, () => t2().results.length, _el$50);
+                      addEventListener(_el$51, "click", props.onNext, true);
+                      insert(_el$51, createComponent(Icon, {
                         name: "arrow-forward",
                         color: "ffffff",
                         size: 14
                       }), null);
-                      return _el$43;
+                      return _el$44;
                     }
                   })];
                 }
               }), null);
-              return _el$37;
+              return _el$38;
             })()
           }));
-          return _el$34;
+          return _el$35;
         })();
       },
       get children() {
-        var _el$14 = _tmpl$2(), _el$15 = _el$14.firstChild, _el$16 = _el$15.firstChild, _el$17 = _el$16.firstChild, _el$18 = _el$15.nextSibling, _el$19 = _el$18.nextSibling, _el$20 = _el$19.firstChild, _el$21 = _el$19.nextSibling, _el$22 = _el$21.nextSibling, _el$23 = _el$22.nextSibling, _el$24 = _el$23.nextSibling;
+        var _el$14 = _tmpl$2(), _el$15 = _el$14.firstChild, _el$16 = _el$15.firstChild, _el$17 = _el$16.firstChild, _el$19 = _el$15.nextSibling, _el$20 = _el$19.nextSibling, _el$21 = _el$20.firstChild, _el$22 = _el$20.nextSibling, _el$23 = _el$22.nextSibling, _el$24 = _el$23.nextSibling, _el$25 = _el$24.nextSibling;
         insert(_el$16, () => TIERS[ex().tier - 1].label, _el$17);
         insert(_el$16, () => TIERS[ex().tier - 1].subtitle, null);
-        insert(_el$18, () => ex().title);
+        insert(_el$19, () => ex().title);
         insert(_el$14, createComponent(For, {
           get each() {
             return ex().story;
           },
           children: (p) => (() => {
-            var _el$69 = _tmpl$14();
-            insert(_el$69, p);
-            return _el$69;
+            var _el$70 = _tmpl$14();
+            insert(_el$70, p);
+            return _el$70;
           })()
-        }), _el$19);
-        insert(_el$20, () => ex().signature);
-        insert(_el$22, createComponent(For, {
+        }), _el$20);
+        insert(_el$21, () => ex().signature);
+        insert(_el$23, createComponent(For, {
           get each() {
             return ex().rules;
           },
           children: (rule) => (() => {
-            var _el$70 = _tmpl$15(), _el$71 = _el$70.firstChild, _el$72 = _el$71.nextSibling;
-            insert(_el$71, createComponent(Icon, {
+            var _el$71 = _tmpl$15(), _el$72 = _el$71.firstChild, _el$73 = _el$72.nextSibling;
+            insert(_el$72, createComponent(Icon, {
               name: "check-small",
               color: "f59e0b",
               size: 16
             }));
-            insert(_el$72, rule);
-            return _el$70;
+            insert(_el$73, rule);
+            return _el$71;
           })()
         }));
-        insert(_el$24, createComponent(For, {
+        insert(_el$25, createComponent(For, {
           get each() {
             return ex().examples;
           },
           children: (example) => (() => {
-            var _el$73 = _tmpl$17(), _el$74 = _el$73.firstChild, _el$75 = _el$74.nextSibling, _el$76 = _el$75.firstChild;
-            insert(_el$74, () => example.input);
-            insert(_el$75, () => example.output, null);
-            insert(_el$73, createComponent(Show, {
+            var _el$74 = _tmpl$17(), _el$75 = _el$74.firstChild, _el$76 = _el$75.nextSibling, _el$77 = _el$76.firstChild;
+            insert(_el$75, () => example.input);
+            insert(_el$76, () => example.output, null);
+            insert(_el$74, createComponent(Show, {
               get when() {
                 return example.note;
               },
               get children() {
-                var _el$77 = _tmpl$16();
-                insert(_el$77, () => example.note);
-                return _el$77;
+                var _el$78 = _tmpl$16();
+                insert(_el$78, () => example.note);
+                return _el$78;
               }
             }), null);
-            return _el$73;
+            return _el$74;
           })()
         }));
         return _el$14;
       }
     }));
-    _el$26.$$click = () => setLeftTab("note");
-    insert(_el$26, createComponent(Icon, {
+    _el$27.$$click = () => setLeftTab("note");
+    insert(_el$27, createComponent(Icon, {
       name: "menu-book",
       get color() {
         return leftTab() === "note" ? "fbbf24" : "78716c";
       },
       size: 14
-    }), _el$27);
-    _el$28.$$click = () => setLeftTab("log");
-    insert(_el$28, createComponent(Icon, {
+    }), _el$28);
+    _el$29.$$click = () => setLeftTab("log");
+    insert(_el$29, createComponent(Icon, {
       name: "smart-toy",
       get color() {
         return leftTab() === "log" ? "fbbf24" : "78716c";
       },
       size: 14
-    }), _el$29);
-    insert(_el$28, createComponent(Show, {
+    }), _el$30);
+    insert(_el$29, createComponent(Show, {
       get when() {
         return memo(() => !!trace())() && trace().results;
       },
       get children() {
-        var _el$30 = _tmpl$3(), _el$31 = _el$30.firstChild;
-        insert(_el$30, () => trace().results.filter((r) => r.ok).length, _el$31);
-        insert(_el$30, () => trace().results.length, null);
-        createRenderEffect(() => className(_el$30, `ml-1 px-1.5 py-0.5 rounded text-[10px] font-black ${trace().passed ? "bg-emerald-900/60 text-emerald-300" : "bg-red-900/60 text-red-300"}`));
-        return _el$30;
+        var _el$31 = _tmpl$3(), _el$32 = _el$31.firstChild;
+        insert(_el$31, () => trace().results.filter((r) => r.ok).length, _el$32);
+        insert(_el$31, () => trace().results.length, null);
+        createRenderEffect(() => className(_el$31, `ml-1 px-1.5 py-0.5 rounded text-[10px] font-black ${trace().passed ? "bg-emerald-900/60 text-emerald-300" : "bg-red-900/60 text-red-300"}`));
+        return _el$31;
       }
     }), null);
     var _ref$ = editorContainerRef;
-    typeof _ref$ === "function" ? use(_ref$, _el$33) : editorContainerRef = _el$33;
+    typeof _ref$ === "function" ? use(_ref$, _el$34) : editorContainerRef = _el$34;
     createRenderEffect((_p$) => {
       var _v$5 = gradeDisabled(), _v$6 = props.pyodideState() !== "ready" ? "Robot helper still waking up..." : "Grade me! (Ctrl+Enter)", _v$7 = `flex-1 flex items-center justify-center gap-1.5 px-3 py-2.5 text-[11px] font-bold uppercase tracking-wider transition-colors border-t-2 ${leftTab() === "note" ? "bg-[#0c0a09] text-amber-400 border-amber-500" : "text-[#78716c] hover:text-[#a8a29e] border-transparent"}`, _v$8 = `flex-1 flex items-center justify-center gap-1.5 px-3 py-2.5 text-[11px] font-bold uppercase tracking-wider transition-colors border-t-2 ${leftTab() === "log" ? "bg-[#0c0a09] text-amber-400 border-amber-500" : "text-[#78716c] hover:text-[#a8a29e] border-transparent"}`;
       _v$5 !== _p$.e && (_el$1.disabled = _p$.e = _v$5);
       _v$6 !== _p$.t && setAttribute(_el$1, "title", _p$.t = _v$6);
-      _v$7 !== _p$.a && className(_el$26, _p$.a = _v$7);
-      _v$8 !== _p$.o && className(_el$28, _p$.o = _v$8);
+      _v$7 !== _p$.a && className(_el$27, _p$.a = _v$7);
+      _v$8 !== _p$.o && className(_el$29, _p$.o = _v$8);
       return _p$;
     }, {
       e: undefined,
@@ -25655,20 +25655,20 @@ function PracticeScreen(props) {
 function HomeScreen(props) {
   const solvedCount = () => EXERCISES.filter((e) => props.solved().has(e.id)).length;
   return (() => {
-    var _el$78 = _tmpl$18(), _el$79 = _el$78.firstChild, _el$80 = _el$79.firstChild, _el$81 = _el$80.firstChild, _el$82 = _el$81.nextSibling, _el$83 = _el$82.nextSibling, _el$84 = _el$83.firstChild, _el$85 = _el$83.nextSibling, _el$86 = _el$85.nextSibling, _el$87 = _el$86.firstChild, _el$88 = _el$87.firstChild, _el$89 = _el$87.nextSibling, _el$90 = _el$89.firstChild, _el$92 = _el$90.nextSibling, _el$91 = _el$92.nextSibling, _el$93 = _el$80.nextSibling;
-    insert(_el$81, createComponent(Icon, {
+    var _el$79 = _tmpl$18(), _el$80 = _el$79.firstChild, _el$81 = _el$80.firstChild, _el$82 = _el$81.firstChild, _el$83 = _el$82.nextSibling, _el$84 = _el$83.nextSibling, _el$85 = _el$84.firstChild, _el$86 = _el$84.nextSibling, _el$87 = _el$86.nextSibling, _el$88 = _el$87.firstChild, _el$89 = _el$88.firstChild, _el$90 = _el$88.nextSibling, _el$91 = _el$90.firstChild, _el$93 = _el$91.nextSibling, _el$92 = _el$93.nextSibling, _el$94 = _el$81.nextSibling;
+    insert(_el$82, createComponent(Icon, {
       name: "smart-toy",
       color: "fbbf24",
       size: 44
     }));
-    insert(_el$83, createComponent(Icon, {
+    insert(_el$84, createComponent(Icon, {
       name: "checklist",
       color: "f59e0b",
       size: 14
-    }), _el$84);
-    insert(_el$89, solvedCount, _el$90);
-    insert(_el$89, () => EXERCISES.length, _el$92);
-    insert(_el$79, createComponent(For, {
+    }), _el$85);
+    insert(_el$90, solvedCount, _el$91);
+    insert(_el$90, () => EXERCISES.length, _el$93);
+    insert(_el$80, createComponent(For, {
       each: TIERS,
       children: (tier) => {
         const tierExercises = () => EXERCISES.filter((e) => e.tier === tier.tier);
@@ -25677,25 +25677,25 @@ function HomeScreen(props) {
             return tierExercises().length > 0;
           },
           get children() {
-            var _el$94 = _tmpl$19(), _el$95 = _el$94.firstChild, _el$96 = _el$95.firstChild, _el$97 = _el$96.nextSibling, _el$98 = _el$95.nextSibling;
-            insert(_el$96, () => tier.label);
-            insert(_el$97, () => tier.subtitle);
-            insert(_el$98, createComponent(For, {
+            var _el$95 = _tmpl$19(), _el$96 = _el$95.firstChild, _el$97 = _el$96.firstChild, _el$98 = _el$97.nextSibling, _el$99 = _el$96.nextSibling;
+            insert(_el$97, () => tier.label);
+            insert(_el$98, () => tier.subtitle);
+            insert(_el$99, createComponent(For, {
               get each() {
                 return tierExercises();
               },
               children: (ex) => (() => {
-                var _el$99 = _tmpl$20(), _el$100 = _el$99.firstChild, _el$101 = _el$100.nextSibling, _el$102 = _el$101.firstChild, _el$103 = _el$102.firstChild, _el$104 = _el$102.nextSibling, _el$105 = _el$101.nextSibling;
-                _el$99.$$click = () => props.onPick(ex.id);
-                insert(_el$100, createComponent(Icon, {
+                var _el$100 = _tmpl$20(), _el$101 = _el$100.firstChild, _el$102 = _el$101.nextSibling, _el$103 = _el$102.firstChild, _el$104 = _el$103.firstChild, _el$105 = _el$103.nextSibling, _el$106 = _el$102.nextSibling;
+                _el$100.$$click = () => props.onPick(ex.id);
+                insert(_el$101, createComponent(Icon, {
                   get name() {
                     return ex.icon;
                   },
                   color: "fbbf24",
                   size: 26
                 }));
-                insert(_el$103, () => ex.title);
-                insert(_el$102, createComponent(Show, {
+                insert(_el$104, () => ex.title);
+                insert(_el$103, createComponent(Show, {
                   get when() {
                     return props.solved().has(ex.id);
                   },
@@ -25707,22 +25707,22 @@ function HomeScreen(props) {
                     });
                   }
                 }), null);
-                insert(_el$104, () => ex.tagline);
-                insert(_el$105, createComponent(Icon, {
+                insert(_el$105, () => ex.tagline);
+                insert(_el$106, createComponent(Icon, {
                   name: "chevron-right",
                   color: "57534e",
                   size: 20
                 }));
-                return _el$99;
+                return _el$100;
               })()
             }));
-            return _el$94;
+            return _el$95;
           }
         });
       }
-    }), _el$93);
-    createRenderEffect((_$p) => setStyleProperty(_el$88, "width", `${solvedCount() / EXERCISES.length * 100}%`));
-    return _el$78;
+    }), _el$94);
+    createRenderEffect((_$p) => setStyleProperty(_el$89, "width", `${solvedCount() / EXERCISES.length * 100}%`));
+    return _el$79;
   })();
 }
 function App() {
@@ -25766,8 +25766,8 @@ function App() {
     }
   };
   return (() => {
-    var _el$106 = _tmpl$21(), _el$107 = _el$106.firstChild, _el$108 = _el$107.firstChild, _el$109 = _el$108.nextSibling;
-    insert(_el$106, createComponent(Show, {
+    var _el$107 = _tmpl$21(), _el$108 = _el$107.firstChild, _el$109 = _el$108.firstChild, _el$110 = _el$109.nextSibling;
+    insert(_el$107, createComponent(Show, {
       get when() {
         return memo(() => screen() === "practice")() ? currentExercise() : null;
       },
@@ -25786,10 +25786,10 @@ function App() {
         onSolved: markSolved,
         onNext: nextChore
       })
-    }), _el$107);
-    insert(_el$109, pyodideText);
-    createRenderEffect(() => className(_el$108, `status-dot ${pyodideState()}`));
-    return _el$106;
+    }), _el$108);
+    insert(_el$110, pyodideText);
+    createRenderEffect(() => className(_el$109, `status-dot ${pyodideState()}`));
+    return _el$107;
   })();
 }
 render(() => createComponent(App, {}), document.getElementById("root"));
