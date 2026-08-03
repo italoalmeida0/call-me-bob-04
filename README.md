@@ -36,6 +36,8 @@ after) solving it.
   (WebAssembly CPython), nothing ever leaves your machine
 - 🔍 **Full test trace** — every test case shows the call, expected value, your
   result and OK/KO, just like a terminal grader
+- ▶️ **Run button** — run your script anytime and see `print()` output in the
+  robot log, with a 15s infinite-loop guard
 - ⭐ **Progress tracking** — solved chores and your code are saved in
   `localStorage`
 - 📱 **Responsive** — works on desktop and mobile
