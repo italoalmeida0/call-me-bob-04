@@ -23,7 +23,7 @@ after) solving it.
 | 1 | The Windmill Gears | Check if one list is a rotation of another (any shift, either direction) | Rotation Check, Array Scanning |
 | 1 | Firefly Field Notes | Render a coordinate list into a text grid of `*` and `.` | 2D Grid, Matrix Rendering |
 | 2 | Bob's Bake Sale | Values that appear in EVERY list, sorted and deduplicated | Set Intersection, Sorting |
-| 2 | Morning Milk Run | Merge k sorted lists into a single sorted route | Merge K Sorted Lists, Heap / Greedy |
+| 2 | Morning Milk Run | Merge k sorted lists into a single sorted route — **without** `sorted()`, `.sort()` or `heapq.merge()` | Merge K Sorted Lists, Heap / Greedy |
 | 3 | The Ribbon Stall | Minimum cuts so every piece is a palindrome | Palindrome Partitioning, Dynamic Programming |
 | 3 | Bob's Workshop Setup | Dependency order with alphabetical tie-breaks; detect circular manuals | Topological Sort, Graphs (Kahn's Algorithm) |
 | 4 | Sunflower Watch | Maximum of every sliding window of size k | Sliding Window Maximum, Deque |
@@ -31,13 +31,18 @@ after) solving it.
 ## How it works
 
 - 📝 **7 chores** across 4 days of Bob's week, each with a story-driven subject
-- 🐍 **Python editor** powered by CodeMirror 6 (syntax highlighting, indent guides)
+- 🐍 **Python editor** powered by CodeMirror 6 (syntax highlighting, indent guides,
+  4-space indent matching [Black](https://github.com/psf/black))
 - 🤖 **In-browser grading** — tests run locally via [Pyodide](https://pyodide.org)
   (WebAssembly CPython), nothing ever leaves your machine
-- 🔍 **Full test trace** — every test case shows the call, expected value, your
-  result and OK/KO, just like a terminal grader
+- 🔍 **Full test trace** — every test case shows `[OK]`/`[KO]` up front, then the
+  call, the expected value and your result on aligned lines with horizontal
+  scroll — just like a terminal grader
 - ▶️ **Run button** — run your script anytime and see `print()` output in the
   robot log, with a 15s infinite-loop guard
+- 🚫 **Enforced rules** — chores that ban a function (`sorted()`, `.sort()` and
+  `heapq.merge()` in Morning Milk Run) check your code statically AND at
+  runtime, no sneaky workarounds
 - ⭐ **Progress tracking** — solved chores and your code are saved in
   `localStorage`
 - 📱 **Responsive** — works on desktop and mobile
