@@ -16,6 +16,8 @@
  *   examples  [{ input, output }] — shown in the subject
  *   tests     [{ call, args, expected }] — args/expected are PYTHON literals
  *             evaluated inside the Pyodide grader; `call` is display-only.
+ *   banned    optional { names: [...], attrs: [...] } — function calls the
+ *             robot rejects via AST inspection before running any test.
  */
 
 export const TIERS = [
@@ -191,6 +193,7 @@ export const EXERCISES = [
     story: [
       "Bob delivers milk at dawn. Each of his carriers hands him a list of house numbers to visit, already sorted from the smallest house number to the largest. Carrying all those separate lists around is a mess, so Bob wants one single route with every stop, still in ascending order.",
       "Since each route is already sorted, Bob expects you to merge them efficiently — his arms are tired enough as it is.",
+      "One more thing: Bob's robot helper is watching, and it will REFUSE to grade any solution that uses sorted(), list.sort(), or heapq.merge(). Bob says the whole point is to merge already-sorted routes by hand — re-sorting everything is cheating.",
     ],
     signature: "def merge_milk_routes(routes: list[list[int]]) -> list[int]:",
     rules: [
@@ -200,7 +203,9 @@ export const EXERCISES = [
       "Handle empty routes and empty input gracefully",
       "All input routes are guaranteed to be sorted in ascending order",
       "Handle negative numbers correctly (yes, Bob's village has weird addresses)",
+      "FORBIDDEN: using sorted(), list.sort(), or heapq.merge() — the robot checks and rejects them",
     ],
+    banned: { names: ["sorted", "merge"], attrs: ["sort", "merge"] },
     examples: [
       { input: "merge_milk_routes([[1, 3, 5], [2, 4, 6]])", output: "[1, 2, 3, 4, 5, 6]" },
       { input: "merge_milk_routes([[1, 5, 9], [2, 3, 8], [4, 6, 7]])", output: "[1, 2, 3, 4, 5, 6, 7, 8, 9]" },
