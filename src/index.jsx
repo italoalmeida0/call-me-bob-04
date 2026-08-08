@@ -454,6 +454,21 @@ function PracticeScreen(props) {
   const gradeDisabled = () =>
     grading() || running() || props.pyodideState() !== "ready";
 
+  // Unified click handlers — decide at click time whether to run the
+  // action or force-stop. This avoids reactive handler-swapping races.
+  const onGradeClick = () => {
+    if (stopMode() === "grade") forceStop();
+    else runGrader();
+  };
+  const onRunClick = () => {
+    if (stopMode() === "run") forceStop();
+    else runCode();
+  };
+  const onFormatClick = () => {
+    if (stopMode() === "format") forceStop();
+    else formatCode();
+  };
+
   return (
     <div class="flex-1 flex flex-col overflow-hidden min-h-0">
       {/* Practice header — two rows on mobile, one row on sm+ */}
@@ -501,7 +516,7 @@ function PracticeScreen(props) {
             <Icon name="restart-alt" color="a8a29e" size={16} />
           </button>
           <button
-            onClick={stopMode() === "format" ? forceStop : formatCode}
+            onClick={onFormatClick}
             disabled={
               stopMode() === "format"
                 ? false
@@ -527,7 +542,7 @@ function PracticeScreen(props) {
             />
           </button>
           <button
-            onClick={stopMode() === "run" ? forceStop : runCode}
+            onClick={onRunClick}
             disabled={
               stopMode() === "run"
                 ? false
@@ -553,7 +568,7 @@ function PracticeScreen(props) {
             />
           </button>
           <button
-            onClick={stopMode() === "grade" ? forceStop : runGrader}
+            onClick={onGradeClick}
             disabled={stopMode() === "grade" ? false : gradeDisabled()}
             class={`flex-1 sm:flex-initial flex items-center justify-center gap-1.5 px-4 py-2 rounded-lg text-sm font-extrabold transition-colors active:translate-y-[2px] active:shadow-none ${
               stopMode() === "grade"
